@@ -33,7 +33,7 @@ They say the first step it's the harder one and boy, tell me about it. I feel li
 
 **Challenges:**
 
-* It took me more hours then i'm willing to admit only on setting Vs and the GCC compiler on its own. It was traumatizing but I learned so much on how to navegate files in windows cdm and command lines that i felt lowkey hacking. It was great for resilience, problem solving and fixing errors. When it finally worked it was the best feeling ever!
+* It took me more hours then i'm willing to admit only on setting VS and the GCC compiler on its own. It was traumatizing but I learned so much on how to navegate files in windows cdm and command lines that i felt lowkey hacking. It was great for resilience, problem solving and fixing errors. When it finally worked it was the best feeling ever!
 * Initially struggled with file paths and ensuring `gcc` found `hello.c`.
 * Git configuration for user identity was a new step.
 * Understanding the `master` vs. `main` branch difference during the first push.
