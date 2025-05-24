@@ -53,3 +53,33 @@ They say the first step it's the harder one and boy, tell me about it. I feel li
 
 * Start working on the basic calculator program (Day 1, Hour 5).
 * Continue practicing the compile-run cycle and Git commands.
+
+# Day 1: C Fundamentals & Basic Calculator Project
+
+**Project Focus:** Basic Calculator (First C mini-project) & Environment Setup
+
+**Summary:**
+Today focused on setting up the C development environment in VS Code with MinGW and starting the first C mini-project: a simple command-line calculator. Also initiated the DevLog for daily tracking and GitHub integration.
+
+**Concepts Learned/Applied:**
+* **C Environment Setup:** Configured VS Code for C development using MinGW (compiler, linker, debugger).
+* **Basic C Syntax:** `main` function, `printf` for output, `scanf` for input.
+* **Variables & Data Types:** Declared and used `int` (integers) and `float` (floating-point numbers) for calculations.
+* **Arithmetic Operators:** Used `+`, `-`, `*`, `/` for basic operations.
+* **Conditional Statements (`if-else if-else`):** Implemented logic to choose operations based on user input.
+* **`switch` Statement:** Explored `switch` as an alternative to `if-else if` for multiple choices (e.g., operator selection).
+* **`char` Data Type:** Handled character input for the operator.
+* **Input/Output (`stdio.h`):** Used `printf` and `scanf` effectively.
+* **Git Basics:** Initialized a local Git repository, performed first commit, and learned about `.gitignore`.
+* **Terminal Navigation:** Practiced `cd` for directory changes and `ls` for listing contents.
+
+**Challenges & Troubleshooting:**
+* Initial environment setup required careful configuration of MinGW paths.
+* Understanding `scanf`'s behavior, especially with `char` and `float` inputs (e.g., leftover newlines).
+* Debugging initial compilation errors related to missing semicolons or incorrect syntax.
+* Significant time spent on troubleshooting nested Git repositories and pushing to GitHub, which was a challenging but valuable learning experience. This involved `git rm --cached`, `git pull --allow-unrelated-histories`, and managing Git's merge editor (`vi` / Vim).
+
+**Next Steps:**
+* Ensure daily DevLog updates are pushed to GitHub consistently.
+* Begin learning about **loops** (e.g., `for`, `while`, `do-while`) in C.
+* Start developing the "Breathing Exercise App" as the next mini-project, applying loop concepts.
