@@ -1,0 +1,13 @@
+# Executables
+*.exe
+*.out
+
+# Object files
+*.o
+
+# Editor specific files
+.vscode/
+
+# Other common generated files
+*.log
+*.tmp
