@@ -130,11 +130,51 @@ Day 3 began with a crucial and extensive project restructuring, moving from a ch
 
 **What I Learned:**
 
-* The profound impact of early project organization on long-term productivity and mental clarity.
+* The profound impact of early project organization on long-term productivity and mental clarity. I mean, i've always been a systematic, bullet journal, productivity apps type of girl, and structure in folders is a pain if done wrong but just pleasing if done correctly. I hope we setted everything for the long run tough.
 * Advanced Git usage for handling complex file system changes like mass renames and deletions.
 * The critical skill of pausing coding to address foundational issues that cause anxiety or confusion.
 * The fundamental concept of `while` loops as condition-driven iterations.
-
+* Today I gradually feel like a more Mr. Robot (my go to joke about steriotipical programmmers at the moment, even when i lowkey love the actor and series so much). I mean, i'm with the hood on and everything.
+I'll use loops heavely in my game dev journey. Made sure to proper understand the path.
 **Next Steps:**
 
 * Complete the `while` loop "echo until quit" mini-project.
+
+# 2025-05-25 - Day 4: Functions in C & Project Modularization
+
+---
+
+### **Topics Covered:**
+* **C Functions:** Deep dive into function declaration (prototypes), definition, and calling mechanisms.
+* **`void` Keyword:** Understanding `void` as a return type for functions that do not return a value.
+* **Modular Programming:** Principles of breaking down code into smaller, manageable, and reusable functions.
+* **`scanf` Input Nuances:** Practical experience with `scanf` behavior, including handling character input and buffer interactions.
+* **Project Organization:** Continued reinforcement of clean file system structure and its importance for larger projects.
+
+---
+
+### **Summary:**
+Today focused on solidifying understanding of C functions by refactoring our calculator project into `function_calculator.c`. This involved defining separate functions for addition, subtraction, multiplication, and division, as well as a `display_menu` function. This significantly improved the modularity and readability of the code compared to a single monolithic `main` function. We also revisited and clarified `scanf` input behaviors.
+
+---
+
+### **Challenges:**
+* Ensuring correct input format for `scanf` when mixing numeric and character input (e.g., operator symbol).
+* Initially, understanding the `scanf` buffer behavior that sometimes consumes unexpected input, leading to "premature" calculations. (Resolved by understanding `scanf`'s token reading).
+
+---
+
+### **What I Learned:**
+* Functions are absolutely crucial for organizing and scaling C programs. They make code much cleaner, easier to debug, and promote reusability – vital for projects like 1KAUSA.
+* The `void` keyword is simple yet powerful for functions that perform actions without returning data.
+* Input handling with `scanf` requires careful attention to format specifiers (`%f`, `%c`) and potential buffer effects.
+* "Today, I truly felt the elegance of modularity. Breaking down the calculator into distinct functions was like seeing the blueprint of a complex machine come to life, each part perfectly designed for its task. It proved that good organization isn't just about pretty folders, but about making the code itself more powerful and maintainable. And overcoming input quirks with `scanf` felt like taming a wild beast, teaching me patience and precision!"
+
+---
+
+### **Next Steps:**
+* Continue practicing function implementation in new C mini-projects.
+* Explore more advanced function concepts (e.g., passing by reference, recursion) in upcoming sessions.
+* Maintain rigorous daily study and Anki review schedule.
+
+---
