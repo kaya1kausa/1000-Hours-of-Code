@@ -1,0 +1,40 @@
+What is the standard header file for input/output functions in C?	<stdio.h>
+What is the main entry point where C program execution begins?	The `main()` function (`int main()`).
+What function is used to display output to the console in C?	`printf()`
+What does `return 0;` at the end of `main()` typically indicate?	Successful program execution.
+How do you write a single-line comment in C?	`// This is a comment`
+How do you write a multi-line comment in C?	`/* This is a multi-line comment */`
+What is a variable in C programming?	A named storage location in memory for data.
+List the three most common basic data types in C.	`int`, `float`, `char`
+Which data type is used for whole numbers (integers)?	`int`
+Which data type is used for numbers with decimal points?	`float` (or `double` for more precision)
+Which data type is used for single characters?	`char`
+What function is used to read input from the console in C?	`scanf()`
+What is the format specifier for reading/writing an integer?	`%d`
+What is the format specifier for reading/writing a float?	`%f`
+What is the format specifier for reading/writing a single character?	`%c`
+What operator is essential before a variable name when using `scanf()` to read input?	The address-of operator (`&`). Example: `scanf("%d", &myVar);`
+What C statements are used for conditional execution (making decisions)?	`if`, `else if`, `else`, `switch`
+What kind of loop in C executes its block at least once, regardless of the condition?	`do-while` loop.
+Which loop is best suited for repeating a block of code a known number of times?	`for` loop.
+What is the difference between a `while` and a `do-while` loop?	`while` checks condition at the start (may not run); `do-while` checks at the end (runs at least once).
+List three relational operators used for comparison in C.	`==` (equal to), `!=` (not equal to), `<` (less than), `>` (greater than), `<=` (less than or equal to), `>=` (greater than or equal to).
+What is the logical AND operator in C? When is its result true?	`&&`. Result is true if BOTH operands are true.
+What is the logical OR operator in C? When is its result true?	`||`. Result is true if AT LEAST ONE operand is true.
+What are the three essential components when working with functions in C?	1. Declaration (Prototype), 2. Definition, 3. Call.
+Why is a function prototype (declaration) important?	It tells the compiler about the function's return type, name, and parameters *before* it's defined or called.
+What does a `void` return type for a function mean?	The function does not return any value to the caller. It performs an action.
+What are the main benefits of using functions in your C code?	Modularity, Reusability, Readability, Easier Debugging.
+Give an example of a function that would typically have a `void` return type.	A function that only prints something to the console, like `void displayMenu();`.
+Define an array in C.	A collection of elements of the same data type, stored in contiguous memory locations, accessed using a 0-indexed position.
+How do you declare an integer array named `scores` that can hold 5 elements?	`int scores[5];`
+If an array has `N` elements, what is the index of its first element and its last element?	First: `0`. Last: `N-1`.
+When an array is passed to a function in C, what is actually transmitted?	A pointer to its first element (its memory address), not a copy of the entire array.
+What is the purpose of the `#define` preprocessor directive?	To create symbolic constants or macros; the preprocessor replaces occurrences of the defined name with its value before compilation.
+What is a pointer in C programming?	A variable that stores the **memory address** of another variable.
+What C operator is used to get the memory address of a variable? Provide an example.	The **address-of operator (`&`)**. Example: `&myVariable` returns the address of `myVariable`.
+What C operator is used to access the value stored at a pointer's memory address? Provide an example.	The **dereference operator (`*`)**. Example: `*myPointer` accesses the value stored at the address `myPointer` holds.
+How do you declare a pointer named `pNum` that can point to an integer?	`int *pNum;`
+If `int arr[] = {10, 20, 30};`, how can you access the second element (value 20) using pointer arithmetic?	`*(arr + 1)` (equivalent to `arr[1]`).
+Why is it important for a pointer's type (e.g., `int *`, `float *`) to match the data type of the variable it points to?	Because the pointer's type dictates (1) how many bytes to jump during pointer arithmetic (`ptr++`) and (2) how to interpret the bytes at the address when dereferencing (`*ptr`).
+Can a pointer directly change the value of the variable it points to? Explain.	Yes. By using the dereference operator (`*`), you can assign a new value to the memory location the pointer holds, thus changing the original variable's value. Example: `*pVar = newValue;`

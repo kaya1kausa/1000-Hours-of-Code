@@ -178,3 +178,118 @@ Today focused on solidifying understanding of C functions by refactoring our cal
 * Maintain rigorous daily study and Anki review schedule.
 
 ---
+
+# 2025-05-26 - Day 5: Arrays in C & Functions with Arrays
+
+**Total Hours Today:** [Your actual time spent today, e.g., 5 hours]
+**Cumulative Hours:** [Update this based on your total progress]
+
+---
+
+### **Topics Covered:**
+* **Arrays in C:** Declaration, initialization, accessing elements (0-indexed).
+* **Passing Arrays to Functions:** Understanding that arrays are passed by reference (address of the first element).
+* **Modular Programming:** Further application of functions to encapsulate array operations (sum, average).
+* **Preprocessor Directives (`#define`):** Using constants for array sizes.
+* **Debugging File Paths & Compilation Errors:** Persistence in troubleshooting "No such file or directory" issues due to incorrect file naming/location.
+
+---
+
+### **Summary:**
+Today focused on understanding and implementing arrays to handle collections of data. We built an `array_stats.c` program to collect integers from the user and calculate their sum and average. Building on yesterday's functions lesson, we refactored this into `array_stats_functions.c`, demonstrating how to pass arrays to functions (`calculateSum`, `calculateAverage`) for cleaner, more modular code. Overcoming persistent compilation errors due to file naming and location was a significant learning point, reinforcing attention to detail in the development environment.
+
+---
+
+### **Challenges:**
+* Persistent "No such file or directory" errors due to misnaming `array_stats_functions.c` as `array_stats_project.c` and other small typos, which required meticulous debugging of file paths and names.
+* Ensuring the correct `gcc` command syntax when providing the source and output file names.
+
+---
+
+### **What I Learned:**
+* That the "O bagulho é louco, e o processo é lento" - Racionais MC. 
+Eu revisei minha schedule e minhas ambições e saber que to investindo 4 horas em "apenas isso"é meio deprimente, mas essa é a base para minha ambição de entrar na 42SP aka a única escola- comunidade de programação possível para alguém como eu, meus jogos, carreira em ML (apesar de usar mais python, C é a mother de python então learn with your elder fucker) 
+
+* Arrays are essential for managing lists of similar data, and their 0-indexed nature is crucial.
+
+* Passing arrays to functions is efficient as it passes a reference, allowing functions to operate directly on the original data.
+
+* The importance of meticulous attention to file names and paths during compilation, as even a small typo can halt progress. Debugging these environment-related issues is a critical skill.
+
+* "Today felt like breaking through a wall! The array concepts clicked quickly, but the real victory was conquering those stubborn file name errors. It was a tough battle, but finally seeing the code compile and run proved that persistence and precision are non-negotiable in programming. My `main` function now looks so much cleaner, it's like tidying up a chaotic room into a functional space for 1KAUSA's grand designs!"
+
+---
+
+### **Next Steps:**
+* Continue practicing array manipulation, especially with loops.
+* Prepare for the next session on Pointers, which are closely related to arrays.
+* Maintain daily Anki reviews for long-term retention.
+
+---
+# 2025-05-27 - Day 6: Pointers & Pointers with Arrays
+
+**Total Hours Today:** [Your actual time spent today, e.g., 5 hours]
+**Cumulative Hours:** [Update this based on your total progress]
+
+---
+
+### **Topics Covered:**
+* **Introduction to Pointers:** Understanding pointers as variables that store memory addresses.
+* **Address-of Operator (`&`):** How to get the memory address of a variable.
+* **Dereference Operator (`*`):** How to access the value stored at a pointer's address.
+* **Pointer Declaration:** `dataType *pointerName;`
+* **Pointers and Arrays:** Understanding that an array's name often behaves as a constant pointer to its first element.
+* **Pointer Arithmetic:** How `array[i]` is equivalent to `*(array + i)`.
+* **Type-Specific Pointers:** The importance of a pointer's type (`int*`, `float*`, etc.) for correct memory stepping and data interpretation.
+* **Practical Application:** Implemented a game development example (`inventory_manager.c`) to clear array slots using pointers in functions.
+
+---
+
+### **Summary:**
+Today's session delved into the powerful concept of pointers in C, which allow direct interaction with memory addresses. We explored how to declare pointers, use the `&` operator to get addresses, and the `*` operator to dereference and access values. A major breakthrough was understanding the deep connection between pointers and arrays, realizing that array names effectively act as pointers to their first element. This enabled us to use pointer arithmetic for array traversal and manipulation. The practical `inventory_manager.c` project solidified these concepts by demonstrating how functions can modify original array data by receiving arrays as pointers. Overcoming initial conceptual hurdles with strong analogies ("compass pointer") proved highly effective.
+
+---
+
+### **Troubleshooting & Fixes:**
+* **Anki Deck Import/Display Resolution:**
+    * **Problem:** Cards imported successfully, but the answer (Back field) was not displaying correctly during review, initially showing blank, then showing the question again.
+    * **Diagnosis:** The issue was not with the import process (data was correctly mapped to Front/Back fields), but with the **Card Template** for the "Basic" note type. The template was inadvertently configured to display the "Back" field on the front of the card, and then only the "Front" field again on the back.
+    * **Solution:**
+        1.  Navigated to Anki's `Browse` window.
+        2.  Selected any card using the "Basic" note type.
+        3.  Opened the `Cards...` editor (or `Ctrl + Shift + C`).
+        4.  Corrected the **Front Template** to contain only `{{Front}}`.
+        5.  Corrected the **Back Template** to contain `{{Front}}<hr id="answer">{{Back}}`.
+        6.  Saved the template changes.
+    * **Result:** All cards now display correctly, with the question on the front and the answer appearing on the back after revelation. This has made the Anki spaced repetition system fully functional for learning C.
+
+---
+
+### **Challenges:**
+* Initially distinguishing between a pointer's value (an address) and the value it points to.
+* Understanding why a pointer's type is crucial (for byte stepping and interpretation).
+* **Persistent Anki template configuration issue, successfully resolved.**
+
+---
+
+### **What I Learned:**
+* Honestly, I'm bad at this operators thing. I'm doing anki to remember then, but i got it wrong everytime so i guess we need more time to assemble that sh*t hehe.
+
+* I'm a writer by heart and code is kind of poetic. I mean, the arrays and pointers things are like a compass and neddle for an specific data type only. Romantic isn't it?
+
+* Pointers are essential for low-level memory control, dynamic memory allocation, and efficient function arguments in C.
+* `&` is for "address of", `*` is for "value at address".
+* Arrays and pointers are two sides of the same coin; the array name essentially *is* a pointer to its first element, and pointer arithmetic is the underlying mechanism for array indexing.
+* The data type of a pointer determines how it navigates memory (how many bytes it jumps) and how it interprets the data it points to.
+* "My understanding of pointers just 'clicked' today, especially with the compass analogy! Seeing how arrays are basically pointers internally clarifies so much. The `inventory_manager` project showed how crucial this is for game dev, letting functions directly tweak game states. This feels like unlocking a new level of control, essential for building the intricate time mechanics of 1KAUSA!"
+* **Crucially, learned how to diagnose and fix Anki card display issues by directly editing card templates, ensuring proper spaced repetition.**
+* Anki is great but it took me forever to do this, hope it's properly fixed for all my decks btw.
+
+---
+
+### **Next Steps:**
+* Continue practicing pointer manipulations and their interaction with arrays.
+* Prepare for tomorrow's session on C Strings (which are character arrays, further bridging pointers and arrays).
+* Maintain daily Anki reviews for long-term retention.
+
+---
