@@ -293,3 +293,32 @@ Today's session delved into the powerful concept of pointers in C, which allow d
 * Maintain daily Anki reviews for long-term retention.
 
 ---
+# 2025-05-27 - Day 6: Pointers & Pointers with Arrays
+
+**Total Hours Today:** [Your actual time spent today, e.g., 5 hours]
+**Cumulative Hours:** [Update this based on your total progress]
+
+---
+
+### **Topics Covered:**
+* Today I was a little but down but i catched up and made some "AHA" connections betwen the operators - again, i'm bad at remembering them, even in anki. And the differences between array, pointers, strings. It's easier then ever was because I'm learning and applying at my own contexts.
+* **Introduction to Pointers:** Understanding pointers as variables that store memory addresses.
+* **Address-of Operator (`&`):** How to get the memory address of a variable.
+* **Dereference Operator (`*`):** How to access the value stored at a pointer's address.
+* **Pointer Declaration:** `dataType *pointerName;`
+* **Pointers and Arrays:** Understanding that an array's name often behaves as a constant pointer to its first element.
+* **Pointer Arithmetic:** How `array[i]` is equivalent to `*(array + i)`.
+* **Type-Specific Pointers:** The importance of a pointer's type (`int*`, `float*`, etc.) for correct memory stepping and data interpretation.
+* **Practical Application:** Implemented a game development example (`inventory_manager.c`) to clear array slots using pointers in functions.
+
+---
+
+### **Summary:**
+Today's session delved into the powerful concept of pointers in C, which allow direct interaction with memory addresses. We explored how to declare pointers, use the `&` operator to get addresses, and the `*` operator to dereference and access values. A major breakthrough was understanding the deep connection between pointers and arrays, realizing that array names effectively act as pointers to their first element. This enabled us to use pointer arithmetic for array traversal and manipulation. The practical `inventory_manager.c` project solidified these concepts by demonstrating how functions can modify original array data by receiving arrays as pointers. Overcoming initial conceptual hurdles with strong analogies ("compass pointer") proved highly effective.
+
+---
+
+### **Troubleshooting & Fixes:**
+* **Anki Deck Import/Display Resolution:**
+    * **Problem:** Cards imported successfully, but the answer (Back field) was not displaying correctly during review, initially showing blank, then showing the question again.
+    * **Diagnosis:** The issue was not with the import process (data was correctly mapped)

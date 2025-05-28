@@ -1,0 +1,25 @@
+What is the purpose of the **address-of operator** in C?	`&` (ampersand). Used to get the memory address of a variable.
+What is an example of using the **address-of operator**?	`int x = 10; int *p = &x;` (p now stores the memory address of x).
+What is the purpose of the **dereference operator** in C?	`*` (asterisk). Used to access the value stored at a pointer's memory address.
+What is an example of using the **dereference operator**?	`int x = 10; int *p = &x; printf("%d", *p);` (prints 10, the value at x's address).
+What does the **equality operator** (`==`) do?	Checks if two values are exactly equal. Returns true (1) or false (0).
+When would you use the **equality operator** (`==`)?	`if (age == 18)` (checks if age is exactly 18).
+What does the **inequality operator** (`!=`) do?	Checks if two values are NOT equal. Returns true (1) or false (0).
+When would you use the **inequality operator** (`!=`)?	`while (input != 'q')` (loop while input is not 'q').
+What do the **less than** (`<`) and **greater than** (`>`) operators do?	Compares if one value is strictly smaller or strictly larger than another.
+What do the **less than or equal to** (`<=`) and **greater than or equal to** (`>=`) operators do?	Compares if one value is smaller/larger than OR equal to another.
+What does the **logical AND operator** (`&&`) do?	Combines two conditions. Returns true (1) ONLY if *both* conditions are true.
+When would you use the **logical AND operator** (`&&`)?	`if (age >= 18 && hasLicense)` (true if both are true).
+What does the **logical OR operator** (`||`) do?	Combines two conditions. Returns true (1) if *at least one* of the conditions is true.
+When would you use the **logical OR operator** (`||`)?	`if (isRaining || isCold)` (true if it's raining OR it's cold, or both).
+What does the **logical NOT operator** (`!`) do?	Reverses the boolean value of a condition. True becomes false, false becomes true.
+When would you use the **logical NOT operator** (`!`)?	`if (!isLoggedIn)` (true if isLoggedIn is false).
+What is a **C string** fundamentally?	An array of characters.
+What special character marks the **end of a C string**?	The **null terminator** (`\0`).
+When you declare `char name[20] = "Kaya";`, how does C know where the string ends?	C automatically adds a **null terminator (`\0`)** after 'a'.
+If you declare `char letters[3] = {'A', 'B', 'C'};`, is `letters` a valid C string? Why or why not?	No. It's a `char` array, but it does **not** have a null terminator (`\0`), so C string functions won't know where it ends.
+What is the primary purpose of **square brackets (`[]`)** in C programming?	To declare arrays (e.g., `int arr[10];`) and to access elements of an array (e.g., `arr[0]`).
+What is the primary purpose of the **asterisk (`*`)** in C programming (in the context of variables)?	To declare pointers (e.g., `int *ptr;`) and to dereference a pointer (access the value it points to, e.g., `*ptr = 5;`).
+What is the primary purpose of **parentheses (`()`)** in C programming?	To make function calls (e.g., `printf("Hello");`) or to group expressions (e.g., `(a + b) * c`).
+If `char name_array[50];` is declared, and you use `scanf("%s", name_array);`, why don't you need to add `\0` manually?	The `scanf("%s", ...)` function automatically adds the **null terminator (`\0`)** at the end of the input it reads into `name_array`.
+True or False: An array can only hold numbers in C.	False. Arrays can hold elements of any single data type, including `int`, `float`, `char`, or custom types.
