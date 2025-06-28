@@ -1,0 +1,13 @@
+2
+Name: Gandalf The Grey
+Health: 150
+Attack: 20
+Defense: 10
+Level: 5
+Status: Alive
+Name: Legonas Greenleaf
+Health: 120
+Attack: 25
+Defense: 8
+Level: 4
+Status: Alive

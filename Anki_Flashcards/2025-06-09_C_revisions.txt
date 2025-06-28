@@ -1,0 +1,25 @@
+# Anki Flashcards - June 9, 2025 - C Fundamentals
+# Separator: ::
+# Deck: C Programming Journey
+
+C Strings::An array of `char` characters, always terminated by a `\0` (null terminator).
+Null Terminator (`\0`)::A special character that marks the end of a C string. Essential for string functions to know where the string ends.
+`printf()` vs `scanf()`::`printf()` writes formatted output to the console. `scanf()` reads formatted input from the console.
+Buffer Overflow::Writing more data into a memory buffer than it can hold, overwriting adjacent memory. A common security vulnerability and crash cause in C.
+Why `strcmp()` for strings, not `==`?::`==` compares memory addresses of string variables. `strcmp()` compares the actual character content of the strings.
+`strlen(str)`::Returns the length of the string `str` *excluding* the null terminator `\0`.
+`strcpy(dest, src)`::Copies `src` string to `dest`. **DANGEROUS:** Does not check `dest` buffer size, can cause buffer overflow.
+`strncpy(dest, src, n)`::Copies at most `n` characters from `src` to `dest`. SAFER, but doesn't guarantee null-termination if `src` is `>= n` characters long. You must manually add `dest[n-1] = '\0';` if needed.
+`strcat(dest, src)`::Appends `src` to `dest`. **DANGEROUS:** Does not check `dest` buffer size, can cause buffer overflow.
+`strncat(dest, src, n)`::Appends at most `n` characters from `src` to `dest`. SAFER, but still requires care with `dest`'s overall size.
+`snprintf(buffer, size, format, ...)`::The SAFEST way to create and format strings into a fixed-size `buffer`. Guarantees no overflow and always null-terminates (if `size > 0`). This is your "Northern Wall."
+`strcmp(str1, str2)` return 0::Strings `str1` and `str2` are identical.
+`strcmp(str1, str2)` return < 0::`str1` comes alphabetically before `str2`.
+`strcmp(str1, str2)` return > 0::`str1` comes alphabetically after `str2`.
+`for` loop (when to use)::When you know the exact number of iterations or have a clear counter.
+`for` loop structure::`for (initialization; condition; increment/decrement) { code; }`
+`while` loop (when to use)::When you need to repeat as long as a condition is true, and you don't know the exact number of iterations beforehand (e.g., waiting for valid input).
+`while` loop structure::`while (condition) { code; // must change condition }`
+`do-while` loop (when to use)::When you need to execute the loop body at least once, then continue based on a condition (e.g., initial password prompt).
+`do-while` loop structure::`do { code; // must change condition } while (condition);`
+Infinite Loop (C)::A loop where the condition never becomes false, causing the program to run indefinitely. (Common `while` loop mistake if condition not changed).

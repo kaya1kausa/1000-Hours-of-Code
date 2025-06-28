@@ -1,0 +1,29 @@
+
+What is stack memory in C?::Automatic, fixed-size memory for local variables, allocated/freed automatically when functions are called/returned. Fast but limited.
+What is heap memory in C?::Manually managed, flexible-size memory for dynamic data, requested with `malloc`/`calloc`/`realloc` and released with `free`. Slower but larger.
+Purpose of `malloc()`::Allocates a block of uninitialized memory of a specified size (in bytes) on the heap. Returns a `void*` or `NULL` on failure.
+Syntax for `malloc()`::`void* malloc(size_t size);` (e.g., `Character *ptr = (Character *) malloc(sizeof(Character));`)
+Purpose of `free()`::Deallocates (releases) memory previously allocated by `malloc`, `calloc`, or `realloc` back to the system.
+Syntax for `free()`::`void free(void *ptr);` (e.g., `free(myCharacterPtr);`)
+Why is it crucial to check if `malloc()` returns `NULL`?::`NULL` indicates memory allocation failure (e.g., out of memory). Using a `NULL` pointer leads to program crashes.
+Why should you set a pointer to `NULL` immediately after `free()`ing it?::To prevent "dangling pointers" (pointers that point to invalid, freed memory), which can cause crashes if accidentally used.
+What is a memory leak?::When memory allocated with `malloc` (or `calloc`/`realloc`) is not explicitly released with `free`, causing the program to hold onto unused memory and consuming system resources unnecessarily over time.
+Purpose of `realloc()`?::To change the size of a previously `malloc`'d (or `calloc`'d) memory block. It attempts to resize the existing block. If it can't, it finds a new block, copies data, and frees the old one. Returns a pointer to the new (or same) block, or `NULL` on failure.
+Syntax for `realloc()`::`void* realloc(void *ptr, size_t new_size);` (e.g., `Character **tempRoster = (Character **) realloc(roster, newCount * sizeof(Character *));`)
+What is a `Character**` type?::A pointer to a pointer to a `Character` struct, commonly used to represent a dynamic array where each element is a pointer to a `Character` struct (`Character*`).
+How do you `malloc` memory for an array of `Character` pointers?::`Character **myArray = (Character **) malloc(count * sizeof(Character *));` This allocates memory for the array of pointers themselves.
+How do you `malloc` memory for an *individual* `Character` struct within that array?::`myArray[i] = (Character *) malloc(sizeof(Character));` This allocates memory for the actual struct that a pointer in the array will point to.
+What is the correct order to `free` memory for a dynamic array of pointers to structs?::First, loop and `free` each individual struct pointed to by the array (`free(myArray[i])`). Then, `free` the array of pointers itself (`free(myArray)`).
+
+Purpose of `FILE *` in C File I/O?::A pointer that acts as a "handle" or "stream" to an open file on the disk, allowing your program to read from or write to it.
+Function to open a file for reading::`FILE *fopen(const char *filename, "r");` Returns `FILE *` on success, `NULL` on failure (e.g., file not found).
+Function to open a file for writing (and overwrite/create)::`FILE *fopen(const char *filename, "w");` Returns `FILE *` on success, `NULL` on failure. Creates if not exists, overwrites if exists.
+Function to open a file for appending::`FILE *fopen(const char *filename, "a");` Returns `FILE *` on success, `NULL` on failure. Creates if not exists, adds to end if exists.
+Purpose of `int fclose(FILE *stream)`?::Closes an open file, flushes any buffered data to disk, releases file locks, and frees associated system resources. Must be called for every `fopen`.
+Difference between `fprintf` and `fscanf`?::`fprintf` writes formatted data *from your program's variables* to a file. `fscanf` reads formatted data *from a file* and stores it *into your program's variables*.
+Why is it crucial to check if `fopen()` returns `NULL`?::`NULL` indicates file opening failure (e.g., file not found, permission denied, invalid path). Trying to use a `NULL` file pointer will crash your program.
+How does File I/O enable "persistence" in games/applications?::It allows saving program state (e.g., character data, game progress, settings) to a file on disk, and loading it back later, so data is not lost when the program closes.
+Why is using `fgets` generally preferred over `scanf` for reading string input (especially with spaces or from files)?::`fgets` reads entire lines (including spaces and the newline character), preventing input buffering issues with subsequent reads. `scanf` `%s` stops at the first whitespace.
+How to remove the trailing newline character that `fgets` often leaves in the buffer?::`nameInput[strcspn(nameInput, "\n")] = 0;` (`strcspn` finds the first occurrence of `\n` and replaces it with the null terminator `\0`).
+Why use `sscanf` after `fgets` for robust structured data parsing from a file?::`fgets` reads an entire line, giving you the full line in a buffer. `sscanf` then parses data *from that buffer* (string-to-string scan), giving more precise control and avoiding `fscanf`'s direct file pointer consumption quirks (especially around newlines).
+What is a common pitfall with `fscanf` after reading an integer, and how is it usually resolved?::`fscanf("%d", &var)` reads the integer but leaves the trailing newline (`\n`) in the input buffer. Subsequent string reads (like `fgets`) might immediately consume this leftover newline. Resolved by adding `while ((c = getchar()) != '\n' && c != EOF);` after the `scanf` call to clear the buffer.

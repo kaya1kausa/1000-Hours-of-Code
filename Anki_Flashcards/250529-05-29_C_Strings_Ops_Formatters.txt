@@ -1,0 +1,21 @@
+**C String Function:** What does `strlen(str)` do?	Counts how many characters are in a string *before* its invisible "End" marker (`\0`). Use to know text length.
+**C String Function:** What does `strcpy(dest, src)` do?	Copies *all* characters from `src` to `dest`. **Unsafe!** Can overflow if `dest` is too small. Avoid if possible.
+**C String Function:** What does `strncpy(dest, src, n)` do?	Copies *up to `n`* characters from `src` to `dest`. **Safer!** Remember to manually add `\0` to `dest` at `dest[n]` if `src` was cut short. Use to prevent overflow.
+**C String Function:** What does `strcat(dest, src)` do?	Adds `src` to the *end* of `dest`. **Unsafe!** Can overflow if `dest` hasn't enough space. Avoid if possible.
+**C String Function:** What does `strncat(dest, src, n)` do?	Adds *up to `n`* characters from `src` to the *end* of `dest`. **Safer!** It always adds `\0` at the end. Use to safely combine strings.
+**C String Function:** What does `strcmp(str1, str2)` do?	Compares two strings letter-by-letter. Returns 0 if identical, <0 if `str1` is "earlier" alphabetically, >0 if `str1` is "later". Use for checking if text matches or for sorting.
+**C String Function:** What does `strstr(haystack, needle)` do?	Searches for `needle` (a smaller string) inside `haystack` (a larger string). Returns a pointer to where it's found, or `NULL` if not found. Use for finding keywords or phrases in text.
+**C Input Function:** What does `fgets(buffer, size, stream)` do?	Reads input *safely* into `buffer`, up to `size` characters, from `stream` (like `stdin` for keyboard). **Includes the newline (`\n`)!** Always preferred for user text input.
+
+**C Operator:** What is the **Address-Of operator**?	`&` (ampersand). Means "the memory location of". Use it to get a variable's address for pointers.
+**C Operator:** What is the **Dereference operator**?	`*` (asterisk). Means "the value stored at the address pointed to by". Use it to get the data a pointer 'points' at.
+**C Operators:** What do **Arithmetic Operators** do?	`+` (add), `-` (subtract), `*` (multiply), `/` (divide), `%` (remainder/modulo). Basic math operations.
+**C Operators:** What do **Comparison Operators** do?	`==` (equal to), `!=` (not equal to), `>` (greater than), `<` (less than), `>=` (greater or equal), `<=` (less or equal). Used to compare values and make decisions (`if` statements).
+**C Operators:** What do **Logical Operators** do?	`&&` (AND - both true), `||` (OR - at least one true), `!` (NOT - reverses true/false). Used to combine or reverse conditions.
+
+**C Format Specifier:** What does `%d` mean in `printf`/`scanf`?	**Decimal Integer.** Use for whole numbers (like `int`).
+**C Format Specifier:** What does `%f` mean in `printf`/`scanf`?	**Floating-Point Number.** Use for numbers with decimals (like `float`, `double`).
+**C Format Specifier:** What does `%c` mean in `printf`/`scanf`?	**Character.** Use for single letters or symbols (like `char`).
+**C Format Specifier:** What does `%s` mean in `printf`/`scanf`?	**String.** Use for sequences of characters (like `char` arrays). Remember `scanf("%s")` is unsafe for full lines!
+**C Format Specifier:** What does `%lu` mean in `printf`?	**Long Unsigned Integer.** Use for lengths or sizes returned by `strlen()` or `sizeof()`.
+**C Format Specifier:** What does `%p` mean in `printf`?	**Pointer Address.** Use to print the actual memory address stored in a pointer.
